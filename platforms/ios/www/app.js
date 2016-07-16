@@ -1,4 +1,4 @@
-angular.module('app', ['ionic', 'ui.router'])
+var app = angular.module('app', ['ionic', 'ui.router', 'ionic.contrib.ui.tinderCards'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -26,5 +26,23 @@ angular.module('app', ['ionic', 'ui.router'])
       url: '/home',
       templateUrl: 'components/home/home.html',
       controller: 'HomeController'
+    })
+
+    .state('my-polls', {
+      url: '/my-polls',
+      templateUrl: 'components/my-polls/my-polls.html',
+      controller: 'MyPollsController'
+    })
+
+    .state('create-poll', {
+      url: '/create-poll',
+      templateUrl: 'components/create-poll/create-poll.html',
+      controller: 'CreatePollController'
+    })
+
+    .state('answer', {
+      url: '/answer',
+      templateUrl: 'components/answer/answer.html',
+      controller: 'AnswerController'
     });
 });

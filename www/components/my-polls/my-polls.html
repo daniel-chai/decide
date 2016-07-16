@@ -1,0 +1,9 @@
+<ion-view view-title="My Polls">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="poll in polls" ng-click='goToAnswer(poll)'>
+        <p>{{ poll }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

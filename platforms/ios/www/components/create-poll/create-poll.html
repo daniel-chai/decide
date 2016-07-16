@@ -1,0 +1,26 @@
+<ion-view view-title="Create Poll">
+  <ion-content class="padding">
+    <label class="item item-input">
+      <input ng-model='poll.title' type="text" placeholder="Poll Name">
+    </label>
+    <label class="item item-input">
+      <input ng-model='poll.question' type="text" placeholder="Question">
+    </label>
+
+    <div class="item item-input-inset" ng-repeat="answer in poll.answers">
+      <label class="item-input-wrapper">
+        <input ng-model='answer' type="text">
+      </label>
+      <button class="button button-small" ng-click='removeAnswer($index)'>Remove</button>
+    </div>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input ng-model='newAnswer.value' type="text" placeholder="Answer">
+      </label>
+      <button class="button button-small" ng-click='addAnswer()'>Add</button>
+    </div>
+
+    <button class="button button-block button-positive" ng-click='submit()'>Submit</button>
+  </ion-content>
+</ion-view>

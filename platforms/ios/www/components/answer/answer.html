@@ -1,0 +1,18 @@
+<ion-view view-title="Decide">
+  <ion-content class="padding">
+    <td-cards>
+      <td-card ng-repeat='answer in poll.answers' ng-if='$index === answerIndex'
+      class="card" on-swipe-left="voteNo()" on-swipe-right="voteYes()">
+        <div class="item item-divider">
+          {{ poll.question }}
+        </div>
+        <div class="item item-text-wrap" >
+          {{ answer }}
+        </div>
+      </td-card>
+    </td-cards>
+
+    <button class="button button-block button-positive" ng-click='voteYes()'>Vote Yes</button>
+    <button class="button button-block button-assertive" ng-click='voteNo()'>Vote No</button>
+  </ion-content>
+</ion-view>
