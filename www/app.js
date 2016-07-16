@@ -40,6 +40,12 @@ var app = angular.module('app', ['ionic', 'ui.router', 'ionic.contrib.ui.tinderC
       controller: 'CreatePollController'
     })
 
+    .state('find-poll', {
+      url: '/find-poll',
+      templateUrl: 'components/find-poll/find-poll.html',
+      controller: 'FindPollController'
+    })
+
     .state('answer', {
       url: '/answer/:id',
       templateUrl: 'components/answer/answer.html',
