@@ -1,13 +1,16 @@
 <ion-view view-title="Decide">
   <ion-content class="padding">
     <td-cards>
-      <td-card ng-repeat='answer in poll.answers' ng-if='$index === answerIndex'
+      <td-card ng-repeat='option in poll.options' ng-if='$index === answerIndex'
       class="card" on-swipe-left="voteNo()" on-swipe-right="voteYes()">
         <div class="item item-divider">
           {{ poll.question }}
         </div>
         <div class="item item-text-wrap" >
-          {{ answer }}
+          {{ option.name }}
+        </div>
+        <div>
+          <img class='swipe-image' ng-src='{{ image }}' />
         </div>
       </td-card>
     </td-cards>

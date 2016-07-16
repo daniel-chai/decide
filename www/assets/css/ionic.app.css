@@ -9823,3 +9823,12 @@ a.button {
   width: 300px;
   margin-top: 10px;
   margin-bottom: 20px; }
+
+.swipe-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 235px;
+  width: 235px;
+  margin-top: 15px;
+  margin-bottom: 15px; }

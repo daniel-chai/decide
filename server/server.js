@@ -30,7 +30,7 @@ app.route('/polls')
   .post(function(req, res) {
     var poll = new Poll();
     poll.name = req.body.name;
-    poll.question = req.body.name;
+    poll.question = req.body.question;
     poll.options = [];
     for (i = 0; i < req.body.options.length; i++) {
       poll.options.push({
@@ -46,6 +46,16 @@ app.route('/polls')
 		  res.json(poll);
     });
   });
+
+app.route('/polls/:id')
+	.get(function(req, res) {
+		Poll.findById(req.params.id, function(err, poll) {
+			if (err) {
+				res.status(500).send(err);
+			}
+			res.json(poll);
+		});
+	});
 
 app.listen(3000, function() {
   console.log('App listening!');
