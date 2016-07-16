@@ -11,6 +11,10 @@ app.service('polls', function($http) {
     return $http.get('http://localhost:3000/polls/' + id);
   };
 
+  this.putOne = function(id, poll) {
+    return $http.put('http://localhost:3000/polls/' + id, poll);
+  };
+
   this.getImage = function(query) {
     return $http({
       method: 'GET',

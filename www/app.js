@@ -44,5 +44,11 @@ var app = angular.module('app', ['ionic', 'ui.router', 'ionic.contrib.ui.tinderC
       url: '/answer/:id',
       templateUrl: 'components/answer/answer.html',
       controller: 'AnswerController'
+    })
+
+    .state('result', {
+      url: '/result/:id',
+      templateUrl: 'components/result/result.html',
+      controller: 'ResultController'
     });
 });

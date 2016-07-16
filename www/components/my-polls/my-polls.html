@@ -1,8 +1,12 @@
 <ion-view view-title="My Polls">
   <ion-content class="padding">
     <ion-list>
-      <ion-item ng-repeat="poll in polls" ng-click='goToAnswer(poll)'>
-        <h2>{{ poll.name }}</h2>
+      <ion-item ng-repeat="poll in polls" >
+        <h1 class='inline'>{{ poll.name }}</h1>
+        <div class='right'>
+          <button class="button button-outline button-positive" ng-click='goToAnswer(poll)'>Vote</button>
+          <button class="button button-outline button-positive" ng-click='goToResults(poll)'>Results</button>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>

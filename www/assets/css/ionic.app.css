@@ -9832,3 +9832,9 @@ a.button {
   width: 235px;
   margin-top: 15px;
   margin-bottom: 15px; }
+
+.inline {
+  display: inline; }
+
+.right {
+  float: right; }

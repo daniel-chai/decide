@@ -1,0 +1,12 @@
+<ion-view view-title="Results">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="option in poll.options" >
+        <h1 class='inline'>{{ option.name }}</h1>
+        <div class='right'>
+          <h2 class='inline'>Yes: {{ option.yes }}</h2>
+          <h2 class='inline'>No: {{ option.no }}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

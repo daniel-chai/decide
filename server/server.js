@@ -55,6 +55,21 @@ app.route('/polls/:id')
 			}
 			res.json(poll);
 		});
+	})
+
+	.put(function(req, res) {
+		Poll.findById(req.params.id, function(err, poll) {
+			if (err) {
+				res.status(500).send(err);
+			}
+			poll.options = req.body.options;
+			poll.save(function(err, poll) {
+				if (err) {
+					res.status(500).send(err);
+				}
+			  res.json(poll);
+	    });
+		})
 	});
 
 app.listen(3000, function() {

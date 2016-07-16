@@ -6,4 +6,8 @@ app.controller('MyPollsController', function($scope, $state, polls) {
   $scope.goToAnswer = function(poll) {
     $state.go('answer', {id: poll._id});
   };
+
+  $scope.goToResults = function(poll) {
+    $state.go('result', {id: poll._id});
+  };
 });
