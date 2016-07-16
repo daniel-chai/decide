@@ -1,23 +1,24 @@
-app.controller('CreatePollController', function($scope, $state) {
+app.controller('CreatePollController', function($scope, $state, polls) {
   $scope.poll = {
-    title: '',
+    name: '',
     question: '',
-    answers: [],
+    options: [],
   };
-  $scope.newAnswer = {
+  $scope.newOption = {
     value: ''
   };
 
-  $scope.addAnswer = function() {
-    $scope.poll.answers.push($scope.newAnswer.value);
-    $scope.newAnswer.value = '';
+  $scope.addOption = function() {
+    $scope.poll.options.push($scope.newOption.value);
+    $scope.newOption.value = '';
   };
 
-  $scope.removeAnswer = function(index) {
-    $scope.poll.answers.splice(index, 1);
+  $scope.removeOption = function(index) {
+    $scope.poll.options.splice(index, 1);
   };
 
   $scope.submit = function() {
-    
+    polls.postOne($scope.poll);
+    $state.go('home');
   };
 });

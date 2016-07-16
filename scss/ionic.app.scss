@@ -20,3 +20,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/assets/lib/ionic/scss/ionic";
+
+.home-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
