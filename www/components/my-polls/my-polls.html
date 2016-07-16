@@ -2,7 +2,7 @@
   <ion-content class="padding">
     <ion-list>
       <ion-item ng-repeat="poll in polls" ng-click='goToAnswer(poll)'>
-        <p>{{ poll }}</p>
+        <h2>{{ poll.name }}</h2>
       </ion-item>
     </ion-list>
   </ion-content>
