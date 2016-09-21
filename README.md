@@ -2,6 +2,8 @@
 
 A mobile application created for the 2016 LinkedIn Intern Hackacthon.
 
+Contributors: Daniel Chai, Eric Liu, Aninda Manocha, Hunter Lee
+
 Decide is a mobile application built using the Ionic framework, with Node.js / MongoDB used for the backend.
 It allows people to send out polls so that other people can vote on the choices.
 The voting mechanism is designed to be fun - people swipe left or right to vote. 
